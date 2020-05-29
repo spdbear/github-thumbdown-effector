@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+button[value*="THUMBS_DOWN"] > g-emoji {
+  display: inline-block;
+  /* animation: rainbow 1s linear infinite, wiggle .1s cubic-bezier(0, .5, .5, 1) infinite, spin .25s cubic-bezier(0, .5, .5, 1) infinite; */
+}
+
+.anime-rainbow {
+  animation: rainbow 1s linear infinite;
+}
+.anime-wiggle {
+  animation: wiggle 0.4s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.anime-spin {
+  animation: spin 0.25s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(0.8);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+
+  20% {
+    transform: translate(7px, 0px) rotateZ(4deg);
+  }
+
+  40% {
+    transform: translate(0px, -7px) rotateZ(0deg);
+  }
+
+  60% {
+    transform: translate(-7px, 0px) rotateZ(-3deg);
+  }
+
+  80% {
+    transform: translate(0px, 7px) rotateZ(-2deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+}
