@@ -4,22 +4,14 @@
   const spin = document.getElementById("spin")
   const wiggle = document.getElementById("wiggle")
   const rainbow = document.getElementById("rainbow")
-  const thinking = document.getElementById("thinking")
+
   window.onload = () => {
     chrome.storage.local.get(
-      [
-        "isSpinEnabled",
-        "isWiggleEnabled",
-        "isRainbowEnabled",
-        "isThinkingEnabled",
-      ],
+      ["isSpinEnabled", "isWiggleEnabled", "isRainbowEnabled"],
       (v) => {
-        buttons.forEach((btn) => {
-          if (v.isSpinEnabled) spin.checked = true
-          if (v.isWiggleEnabled) wiggle.checked = true
-          if (v.isRainbowEnabled) rainbow.checked = true
-          if (v.isThinkingEnabled) thinking.checked = true
-        })
+        if (v.isSpinEnabled) spin.checked = true
+        if (v.isWiggleEnabled) wiggle.checked = true
+        if (v.isRainbowEnabled) rainbow.checked = true
       }
     )
   }
@@ -44,11 +36,4 @@
     })
   }
   rainbow.addEventListener("change", setRainbowSetting, false)
-
-  const setThinkingSetting = () => {
-    chrome.storage.local.set({
-      isThinkingEnabled: thinking.checked,
-    })
-  }
-  thinking.addEventListener("change", setThinkingSetting, false)
 })()

@@ -1,16 +1,15 @@
 "use strict"
 
 !(function () {
-  const buttons = document.querySelectorAll(
-    'button[value*="THUMBS_DOWN"]>g-emoji'
+  const thumbdowns = Array.from(
+    document.querySelectorAll('button[value*="THUMBS_DOWN"]>g-emoji')
   )
+  const confuses = Array.from(
+    document.querySelectorAll('button[value*="CONFUSED"]>g-emoji')
+  )
+  const buttons = [...thumbdowns, ...confuses]
   chrome.storage.local.get(
-    [
-      "isSpinEnabled",
-      "isWiggleEnabled",
-      "isRainbowEnabled",
-      "isThinkingEnabled",
-    ],
+    ["isSpinEnabled", "isWiggleEnabled", "isRainbowEnabled"],
     (v) => {
       console.log(v)
       buttons.forEach((btn) => {
@@ -24,7 +23,6 @@
           if (v.isWiggleEnabled)
             animes.push("wiggle 0.4s cubic-bezier(0, 0.5, 0.5, 1) infinite")
         }
-        if (v.isThinkingEnabled) btn.textContent = "🤔"
         btn.style.animation = animes.join(",")
       })
     }
