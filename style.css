@@ -19,7 +19,9 @@ button[value*="THUMBS_DOWN"] > g-emoji {
   0% {
     filter: hue-rotate(0deg);
   }
-
+  50% {
+    filter: hue-rotate(180deg);
+  }
   100% {
     filter: hue-rotate(360deg);
   }
