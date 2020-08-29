@@ -1,5 +1,5 @@
 {
-  "name": "github-thumbdown-improve",
+  "name": "GitHub thumbsdown Effector",
   "author": "spdbear",
   "description": "improve github emoji :-1:",
   "version": "1.1.0",
@@ -15,7 +15,7 @@
   ],
   "browser_action": {
     "default_icon": {},
-    "default_title": "github-thumbdown-improve",
+    "default_title": "GitHub thumbsdown Effector",
     "default_popup": "popup.html"
   }
 }

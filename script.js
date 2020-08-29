@@ -1,13 +1,13 @@
 "use strict"
 
 !(function () {
-  const thumbdowns = Array.from(
+  const thumbsdowns = Array.from(
     document.querySelectorAll('button[value*="THUMBS_DOWN"]>g-emoji')
   )
   const confuses = Array.from(
     document.querySelectorAll('button[value*="CONFUSED"]>g-emoji')
   )
-  const buttons = [...thumbdowns, ...confuses]
+  const buttons = [...thumbsdowns, ...confuses]
   chrome.storage.local.get(
     ["isSpinEnabled", "isWiggleEnabled", "isRainbowEnabled"],
     (v) => {
