@@ -15,7 +15,7 @@
       buttons.forEach((btn) => {
         const animes = []
         if (v.isRainbowEnabled) animes.push("rainbow 1s linear infinite")
-        if (v.isWiggleEnabled && v.isRainbowEnabled) {
+        if (v.isSpinEnabled && v.isWiggleEnabled) {
           animes.push("spin-wiggle 0.35s cubic-bezier(0, 0.5, 0.5, 1) infinite")
         } else {
           if (v.isSpinEnabled)
