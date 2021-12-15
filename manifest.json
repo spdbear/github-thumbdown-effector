@@ -4,7 +4,7 @@
   "description": "Disambiguate negative emoji reactions on GitHub",
   "version": "2.0.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
