@@ -12,7 +12,6 @@
   chrome.storage.local.get(
     ["isSpinEnabled", "isWiggleEnabled", "isRainbowEnabled"],
     (v) => {
-      console.log(v)
       buttons.forEach((btn) => {
         const animes = []
         if (v.isRainbowEnabled) animes.push("rainbow 1s linear infinite")
