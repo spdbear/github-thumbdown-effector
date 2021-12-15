@@ -1,10 +1,6 @@
 @charset "utf-8";
 
-button[value*="THUMBS_DOWN"] > g-emoji {
-  display: inline-block;
-}
-
-button[value*="CONFUSED"] > g-emoji {
+g-emoji[alias="thumbs down"], g-emoji[alias="-1"] {
   display: inline-block;
 }
 
